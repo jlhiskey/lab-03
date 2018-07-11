@@ -1,6 +1,6 @@
 'use strict';
 
-var userName, myAge, myState, myHobby, myCrash, mySiblings;
+var userName, myAge, myState, myHobby, myCrash, mySiblings, myNumber, userGuess, usedGuesses;
 
 userName = prompt('What is your name?');
 
@@ -51,3 +51,24 @@ if (mySiblings.toUpperCase() === 'Y') {
 } else {
   alert('That was not the answer I wanted...Try Y or N next time.');
 }
+
+myNumber = 31;
+usedGuesses = 0;
+userGuess= prompt('I was a hockey goaltender for 10 years. Can you guess what number I wore?');
+usedGuesses++;
+parseInt(userGuess);
+while (userGuess !== myNumber && usedGuesses !== 4) {
+  if (userGuess < myNumber) {
+    alert('You are too low, try again!');
+    userGuess = prompt('Try Again, enter another number.');
+    usedGuesses++;
+  } else if (userGuess > myNumber) {
+    alert('You are too high, try a different number.');
+    userGuess = prompt('Try Again, enter another number.');
+    usedGuesses++;
+  } else {
+    alert('You got it!');
+    break;
+  }
+}
+

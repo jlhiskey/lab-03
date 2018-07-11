@@ -1,0 +1,146 @@
+* {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* .slider-checkbox {
+  width: 3em;
+  height: 1em;
+}
+
+.slider-checkbox * {
+  transition: 350ms;
+}
+
+#slider {
+  display: none;
+}
+
+.slider-checkbox > label {
+  display: block;
+  height: 100%;
+  background-color: #ff7a7a;
+  border: 1px solid #aaa;
+  border-radius: .5em;
+  padding-top: .1em;
+  padding-left: .2em;
+  margin: 1em 0;
+}
+
+.slider-checkbox div {
+  width: .6em;
+  height: .6em;
+  background: white;
+  border-radius: 2em;
+}
+
+input[type='checkbox']:checked + label {
+  background: #71ff7a;
+  padding-left: 2em;
+}
+*/
+body {
+line-height: 1;
+font-size: 18px;
+font-family: 'Lato', sans-serif;
+font-weight: 300;
+color: #131318;
+margin: 0px;
+padding: 0px;
+background-color: #fff;
+background: url('dark-texture.png') repeat;
+min-height: 100%;
+}
+
+ul {
+  list-style-type: none !important;
+}
+
+p {
+font-size: 1em;
+line-height: 1.25em;	
+margin: 0 auto 1em auto;
+}
+
+h1, h2, h3 {
+position: relative;
+top: 0px;
+font-family: 'Archivo Black', sans-serif;
+font-size: 5em;
+text-align: center;
+color: #f2f2f1;
+text-transform: uppercase;
+}
+
+.col-1 {
+box-sizing: border-box;
+text-align: center;
+padding: 0 30px;
+}
+
+.grid {
+background: url('grid-pattern.png') repeat;
+background-size: 250px;
+}
+
+.bio {
+float: none;
+min-height: 100%;
+border-top: 20px solid transparent;
+transition: all .3s ease;
+display: table-cell;
+padding-bottom: 60px;
+}
+
+.bio h3 {
+margin: 1em 0;
+transition: all .3s ease;
+}
+
+.bio p {
+font-size: 1.25em;
+text-align: left;
+color: #eaeaf4;
+font-weight: 400;
+padding: 0 60px;
+transition: all .3s ease;
+}
+
+.bio ul {
+  font-size: 1.25em;
+text-align: left;
+color: #eaeaf4;
+font-weight: 400;
+padding: 0 60px;
+transition: all .3s ease;
+}
+
+.bio li {
+text-align: left;
+color: #eaeaf4;
+font-weight: 400;
+padding: 0 60px;
+  transition: all .3s ease;
+  line-height: 1.5;
+}
+.list {
+  line-height: 1.6em;
+  text-align: left !important;
+}
+
+.spacer {
+height: 100px;
+}
+
+#about {
+text-align: center;
+}
+
+#dann {
+border-color: #ed008c;
+}
+
+#bio {
+display: table;
+width: 100%;
+min-height: 100%;
+}
