@@ -72,73 +72,28 @@ var userName, myAge, myState, myHobby, myCrash, mySiblings, myNumber, userGuess,
 //   }
 // }
 
-
 myStates = ['illinois', 'pennsylvania'];
 stateGuesses = 1;
 guessState = prompt('Can you guess where I lived besides Washington?');
 var running = true;
-
 while (stateGuesses < 7 && running) {
   // console.log({guessState});
   // console.log({stateGuesses});
   for (var i = 0; i < myStates.length; i++) {
     if (myStates[i] === guessState) {
       // console.log({myStates[i]});
-      console.log('winner'); 
+      alert('You are correct!');
       running = false;
       break;
-    } else {
-      guessState = prompt('try again');
-      stateGuesses++;
     }
   }
+  if (running === true) {
+    guessState = prompt('Try again! You have used ' + stateGuesses + ' Enter another state');
+    stateGuesses++;
+  }
+  if (stateGuesses === 7) {
+    alert('You have run out of guesses, the correct answers were Illinois and Pennsylvania');
+    running = false;
+    break;
+  }
 }
-
-
-
-
-
-// while (stateGuesses < 7 ) {
-//   console.log({guessState})
-// for( var i = 0; i < myStates.length; i++) {
-//     console.log('mystate', myStates[i])
-//     if (guessState !== myStates[i]) {
-//       alert('Try again!');
-//       guessState = prompt('Enter another state.');
-//       stateGuesses++;
-//     } else if (stateGuesses === 6) {
-//       alert('Sorry you\'ve run out of guesses! l;kdf;ldsfkdsl;kfs;lsfk');
-//       break;
-//     } else {
-//       alert('You got it!');
-//       break;
-//     }
-//   }
-// }
-
-
-// while (stateGuesses < 7) {
-//   for (var state in myStates) {
-//     if (state === guessState) {
-//       console.log('correct');
-//       prompt('You got it!');
-//       break;
-//     } else if (stateGuesses === 6) {
-//       console.log('out of guesses');
-//       guessState = prompt('You are out of guesses, sorry! The correct answer was Illinois or Pennsylvania');
-//       break;
-//     } else {
-//       console.log('incorrect');
-//       prompt('Try again! You have used ' + stateGuesses + ' Enter another state');
-//       stateGuesses++;
-//       break;
-//     }
-//   }
-// }
-
-
-
-
-
-
-
