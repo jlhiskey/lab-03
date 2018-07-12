@@ -1,6 +1,6 @@
 'use strict';
 
-var userName, myAge, myState, myHobby, myCrash, mySiblings, myNumber, userGuess, usedGuesses, myStates, guessState, stateGuesses, userScore, finalTally;
+var userName, myAge, myState, myHobby, myCrash, mySiblings, myNumber, userGuess, usedGuesses, myStates, guessState, stateGuesses, userScore;
 
 userName = prompt('What is your name?');
 userScore = 0;
@@ -89,7 +89,7 @@ while (stateGuesses < 7 && running) {
     if (myStates[i] === guessState) {
       // console.log({myStates[i]});
       alert('You are correct!');
-      userScore++
+      userScore++;
       running = false;
       break;
     }
@@ -104,4 +104,5 @@ while (stateGuesses < 7 && running) {
     break;
   }
 }
-finalTally = alert('Congrats! You scored '+ userScore + ' out of a possible 7');
+var finalTally = alert('Congrats! You scored '+ userScore + ' out of a possible 7');
+console.log(finalTally);
