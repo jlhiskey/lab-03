@@ -1,15 +1,16 @@
 'use strict';
 
-var userName, myAge, myState, myHobby, myCrash, mySiblings, myNumber, userGuess, usedGuesses, myStates, guessState, stateGuesses;
+var userName, myAge, myState, myHobby, myCrash, mySiblings, myNumber, userGuess, usedGuesses, myStates, guessState, stateGuesses, userScore, finalTally;
 
 userName = prompt('What is your name?');
-
+userScore = 0;
 alert('These questions are answered with a Y or N.');
 
 myAge = prompt('Welcome ' + userName + '. Do you think that I am over 35?');
 console.log('am I over 35?', userName);
 if (myAge.toUpperCase() === 'Y') {
   alert('You are correct, I am 39.');
+  userScore++;
 } else if (myAge.toUpperCase() === 'N') {
   alert('Sorry, I actually am! I\'ll be 40 this year');
 } else {
@@ -21,6 +22,7 @@ if (myState.toUpperCase() === 'Y') {
   alert('Nope! I\'m from Illinois');
 } else if (myState.toUpperCase() === 'N') {
   alert('You would be correct!');
+  userScore++;
 } else {
   alert('That was not the answer I wanted...Try Y or N next time.');
 }
@@ -28,6 +30,7 @@ myHobby = prompt('Do I like to hike?');
 console.log('Do I hike?', myHobby);
 if (myHobby.toUpperCase() === 'Y') {
   alert('Aboslutely! Every weekend!');
+  userScore++;
 } else if (myHobby.toUpperCase() === 'N') {
   alert('Sorry, I hate being stuck inside!');
 } else {
@@ -37,6 +40,7 @@ myCrash = prompt('I used to fly for the military. Was I ever involved in a midai
 console.log('Plane Crash!!', myCrash);
 if (myCrash.toUpperCase() === 'Y') {
   alert('You\'re right! We nearly died once.');
+  userScore++;
 } else if (myCrash.toUpperCase() === 'N') {
   alert('Unfortunately you\'re wrong! We nearly crashed once.');
 } else {
@@ -46,6 +50,7 @@ mySiblings = prompt('Do I have any siblings?');
 console.log('Do I have Siblings?', mySiblings);
 if (mySiblings.toUpperCase() === 'Y') {
   alert('Right! I have two siblings who are both much older than me!');
+  userScore++;
 } else if (mySiblings.toUpperCase() === 'N') {
   alert('I actually have two siblings! Both older!');
 } else {
@@ -68,6 +73,7 @@ while (userGuess !== myNumber && usedGuesses !== 4) {
     usedGuesses++;
   } else {
     alert('You got it!');
+    userScore++;
     break;
   }
 }
@@ -83,6 +89,7 @@ while (stateGuesses < 7 && running) {
     if (myStates[i] === guessState) {
       // console.log({myStates[i]});
       alert('You are correct!');
+      userScore++
       running = false;
       break;
     }
@@ -97,3 +104,4 @@ while (stateGuesses < 7 && running) {
     break;
   }
 }
+finalTally = alert('Congrats! You scored '+ userScore + ' out of a possible 7');
